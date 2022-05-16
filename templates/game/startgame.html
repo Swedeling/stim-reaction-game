@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" action="{% url 'startgame' %}">
+    {% csrf_token %}
+    {{game_form}}
+    <button class="btn btn-primary my-4" type="submit">Dodaj</button>
+</form>
+<ul class="messages">
+    {% for message in messages %}
+    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
