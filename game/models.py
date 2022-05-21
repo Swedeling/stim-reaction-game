@@ -19,7 +19,7 @@ class Game(models.Model):
     objects = models.Manager()
 
 
-class Scores(models.Model):
+class Score(models.Model):
     game_played=models.ForeignKey(Game, on_delete=models.CASCADE)
     round=models.IntegerField(default=1)
     is_won=models.BooleanField()
