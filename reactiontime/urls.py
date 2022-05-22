@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from game import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path("", views.homepage, name="homepage"),
@@ -24,5 +26,5 @@ urlpatterns = [
     path("login", views.login_request, name="login"),
     path("logout", views.logout_request, name="logout"),
     path("startgame", views.start_game, name="startgame"),
-
-]
+    path("test", views.test, name="test"),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
