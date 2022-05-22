@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+{% extends "base.html" %}
+
 <body>
+{% block content %}
+
 <form method="post" enctype="multipart/form-data" action="{% url 'startgame' %}">
     {% csrf_token %}
     {{game_form}}
@@ -15,5 +13,8 @@
     <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
     {% endfor %}
 </ul>
+
+{% endblock %}
 </body>
-</html>
+
+
