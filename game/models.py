@@ -15,6 +15,7 @@ class Game(models.Model):
         ('A', 'Im after work'),
     )
     state = models.CharField(max_length=1, choices=STATE_CHOICES)
+    avg_speed = models.DecimalField(max_digits=9, decimal_places=3)
 
     objects = models.Manager()
 

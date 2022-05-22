@@ -5,41 +5,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!--Bootstrap CSS-->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<!--Title-->
+
+    <link href="{% static '/css/game_style.css' %}" rel="stylesheet" />
+    <script src="{% static '/js/stroop_game.js' %}" defer></script>
+
     <title>{% block title %} Stim Reaction Game {% endblock %}</title>
-    <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/homepage">Stim Reaction Game</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="False" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      {% if user.is_authenticated %}
-      <li class="nav-item">
-        <a class="nav-link" href="/homepage">Welcome, {{user.username}}</a>
-      </li>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/startgame">Start new game</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/logout">Logout</a>
+</head>
 
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/homepage">Stim Reaction Game</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="False" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="/homepage">Welcome, {{user.username}}</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/startgame">Start new game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
 
-      {% else %}
+          {% else %}
 
-      <li class="nav-item">
-        <a class="nav-link" href="/login">Login</a>
-      </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
 
-      {% endif %}
-    </ul>
-  </div>
-</nav>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+    </header>
 
 {% block content %}
 
 {% endblock %}
+
+</body>
