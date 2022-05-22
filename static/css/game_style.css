@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(230, 230, 230);
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  button {
+    padding: 14px 28px;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  .color {
+    display: none;
+    padding: 14px 28px;
+    font-size: 24px;
+    cursor: pointer;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  .thick {
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  .btn {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+  .title {
+    font-size: 44px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+  }
+
+  .target {
+    font-size: 44px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: bold;
+  }

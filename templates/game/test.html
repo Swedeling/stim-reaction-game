@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stroop Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% static '/css/game_style.css' %}" rel="stylesheet" />
+    <script src="{% static '/js/stroop_game.js' %}" defer></script>
+</head>
+
+<body>
+    <h1 class="title">Stroop Test</h1>
+    <p class="thick">Match the color of the displayed text to the text on the buttons.</p>
+    <p class="target" id="wordParagraph"></p>
+    <button id="startButton">Start game</button>
+    <p id="counter" class="thick"></p>
+
+    <button class="color">pink</button>
+    <button class="color">orange</button>
+    <button class="color">yellow</button>
+    <button class="color">green</button>
+    <button class="color">blue</button>
+    <button class="color">purple</button>
+</body>
+</html>
