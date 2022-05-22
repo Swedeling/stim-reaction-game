@@ -1,16 +1,9 @@
 body {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(234, 225, 225);
   }
 
   p {
     font-size: 24px;
-  }
-
-  button {
-    padding: 14px 28px;
-    font-size: 24px;
-    cursor: pointer;
-    font-family: "Lucida Console", "Courier New", monospace;
   }
 
   .color {
@@ -45,4 +38,23 @@ body {
     font-size: 44px;
     font-family: "Lucida Console", "Courier New", monospace;
     font-weight: bold;
+    -webkit-text-stroke: 1px rgb(26, 26, 26);
   }
+
+  .center_padded {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 25px;
+    border: 3px solid #126c2c;
+    padding: 50px;
+}
+
+.medium {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 32px;
+}

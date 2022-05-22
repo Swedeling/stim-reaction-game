@@ -1,12 +1,32 @@
 {% extends "base.html" %}
 
-<body>
 {% block content %}
 
 <form method="post" enctype="multipart/form-data" action="{% url 'startgame' %}">
     {% csrf_token %}
     {{game_form}}
-    <button class="btn btn-primary my-4" type="submit">Dodaj</button>
+    <div class="center_padded">
+          <h1 class="title" id="title">Stroop Test</h1>
+          <p class="thick" id="summary">Match the color of the displayed text to the text on the buttons.</p>
+          <p class="target" id="wordParagraph"></p>
+          <p class="medium" id="results"></p>
+          <button type="button" id="startButton" class="btn btn-success btn-lg">Start game</button>
+          <button type="button" id="instructions" class="btn btn-secondary btn-lg">Instructions</button>
+          <p id="counter" class="thick"></p>
+          <button type="button" class="color btn btn-outline-dark btn-lg" style="display:none;">pink</button>
+          <button type="button" class="color btn btn-outline-dark btn-lg" style="display:none;">orange</button>
+          <button type="button" class="color btn btn-outline-dark btn-lg" style="display:none;">yellow</button>
+          <button type="button" class="color btn btn-outline-dark btn-lg" style="display:none;">green</button>
+          <button type="button" class="color btn btn-outline-dark btn-lg" style="display:none;">blue</button>
+          <button type="button" class="color btn btn-outline-dark btn-lg" style="display:none;">purple</button>
+          <p id="reactionTime" class="thick"></p>
+    </div>
+
+    <input type="hidden" id="good_answers" name="good_answers">
+    <input type="hidden" id="bad_answers" name="bad_answers">
+    <input type="hidden" id="avg_speed" name="avg_speed">
+
+    <button class="btn btn-primary my-4" type="submit" id="submitter" style="display: none" >Dodaj</button>
 </form>
 <ul class="messages">
     {% for message in messages %}
@@ -15,6 +35,5 @@
 </ul>
 
 {% endblock %}
-</body>
 
 

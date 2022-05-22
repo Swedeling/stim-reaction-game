@@ -10,6 +10,8 @@ from .models import Game
 import datetime
 from .forms import GameForm
 
+from decimal import Decimal
+
 from django.contrib.auth.models import User
 
 from django.http import HttpResponse, HttpResponseNotFound
@@ -48,6 +50,7 @@ def login_request(request):
     form = AuthenticationForm()
     return render(request=request, template_name="game/login.html", context={"login_form":form})
 
+
 def logout_request(request):
     logout(request)
     messages.info(request, "You have successfully logged out.")
@@ -58,18 +61,20 @@ def homepage(request):
     return render(request=request,template_name="game/homepage.html")
 
 
-
 def start_game(request):
     if request.method == "POST":
         game_form = GameForm(request.POST)
+        form = request.POST
         form_state = game_form.data.get('state')
 
         Game.objects.create(
             player=request.user,
-            state=form_state
+            state=form_state,
+            good_answers=int(form.get('good_answers', '0')),
+            bad_answers=int(form.get('bad_answers', '0')),
+            avg_speed=Decimal(form.get('avg_speed', '0'))
         )
         now = datetime.datetime.now().strftime("%H:%M")
-
 
         if Game.objects.filter(player=request.user.id).exists():
             messages.info(request, "Game is added to database!")
