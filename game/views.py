@@ -7,11 +7,13 @@ from .forms import NewUserForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from .models import Game
+from .models import Score
 import datetime
 from .forms import GameForm
 
 from decimal import Decimal
 
+from .filters import GameFilter
 from django.contrib.auth.models import User
 
 from django.http import HttpResponse, HttpResponseNotFound
@@ -58,7 +60,13 @@ def logout_request(request):
 
 
 def homepage(request):
-    return render(request=request,template_name="game/homepage.html")
+    return render(request=request, template_name="game/homepage.html")
+
+
+def history(request):
+    myFilter = GameFilter(request.GET, queryset=Game.objects.all())
+    objects = myFilter.qs
+    return render(request=request, template_name="game/history.html", context={'objects': objects, 'scores': Score.objects.all(), 'myFilter': myFilter})
 
 
 def start_game(request):

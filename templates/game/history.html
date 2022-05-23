@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+<body>
+{% block content %}
+    <h2>Results history </h2>
+
+    <form method="get">
+    {{ myFilter.form }}
+        <button type = "subimt" > Search</button>
+    </form>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Player</th>
+          <th scope="col">Date</th>
+          <th scope="col">State</th>
+          <th scope="col">Average speed</th>
+          <th scope="col">Good answers</th>
+          <th scope="col">Bad answers</th>
+        </tr>
+      </thead>
+        <tbody>
+            {% for object in objects %}
+            <tr>
+                <td>{{object.player}}</td>
+                <td>{{ object.start_time }}</td>
+                {% if object.state == 'A' %}
+                <td>After work</td>
+                    {% else %}
+                    <td>Before work</td>
+                {% endif %}
+                <td>{{object.avg_speed }}</td>
+                <td>{{object.good_answers}} </td>
+                <td> {{object.bad_answers}} </td>
+            </tr>
+            {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}
+
+</body>
