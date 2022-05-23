@@ -8,7 +8,6 @@ body {
 
   .color {
     display: none;
-    padding: 14px 28px;
     font-size: 24px;
     cursor: pointer;
     font-family: "Lucida Console", "Courier New", monospace;
@@ -19,12 +18,6 @@ body {
   }
 
   .btn {
-    border: none;
-    background-color: inherit;
-    padding: 14px 28px;
-    font-size: 24px;
-    cursor: pointer;
-    display: inline-block;
     font-family: "Lucida Console", "Courier New", monospace;
   }
 
