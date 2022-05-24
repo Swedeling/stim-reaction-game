@@ -65,7 +65,7 @@ def homepage(request):
 def history(request):
     myFilter = GameFilter(request.GET, queryset=Game.objects.all())
     objects = myFilter.qs
-    return render(request=request, template_name="game/history.html", context={'objects': objects, 'scores': Score.objects.all(), 'myFilter': myFilter})
+    return render(request=request, template_name="game/history.html", context={'objects': objects, 'myFilter': myFilter})
 
 
 def start_game(request):
@@ -91,8 +91,17 @@ def start_game(request):
 
     game_form = GameForm()
 
-    return render(request=request,template_name="game/startgame.html", context={'game_form': game_form})
+    return render(request=request, template_name="game/startgame.html", context={'game_form': game_form})
 
 
 def test(request):
     return render(request=request,template_name="game/test.html")
+
+def result(request):
+    current_player = request.user
+    objects = Game.objects.filter(player=current_player)
+    last = objects.last()
+    num = int(len(Game.objects.filter(player=current_player)) - 2)
+    prev = objects[num]
+    diff = prev.result - last.result
+    return render(request=request, template_name="game/result.html", context = {'data': Game.objects.filter(player=current_player), 'last': last, 'prev' : prev, 'diff': diff})

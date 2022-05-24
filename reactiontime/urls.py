@@ -28,4 +28,5 @@ urlpatterns = [
     path("logout", views.logout_request, name="logout"),
     path("startgame", views.start_game, name="startgame"),
     path("history", views.history, name="history"),
+    path("result", views.result, name="result"),
     path("test", views.test, name="test")] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

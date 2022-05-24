@@ -40,6 +40,8 @@ Wrong answers: .
     <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
     {% endfor %}
 </ul>
+    <button type="button" class="btn btn-outline-dark" style="display:block;"><a href="{% url 'result' %}">results</a></button>
+
 
 {% endblock %}
 

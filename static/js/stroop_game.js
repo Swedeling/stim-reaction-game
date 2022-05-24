@@ -117,8 +117,14 @@ function gameOver() {
 
   good_answers.value = correctAnswers
   bad_answers.value = amount - correctAnswers
-  avg_speed.value = reactionsSum/correctAnswers
+
+  if (correctAnswers != 0){
+    avg_speed.value = reactionsSum/correctAnswers
+  } else {
+    avg_speed.value = 0
+  }
+}
 
   submitter.style.display = `block`
 
-}
+
