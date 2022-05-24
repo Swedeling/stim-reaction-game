@@ -19,7 +19,6 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseNotFound
 
 
-
 def register_request(request):
     if request.method == "POST":
         form = NewUserForm(request.POST)
@@ -80,7 +79,8 @@ def start_game(request):
             state=form_state,
             good_answers=int(form.get('good_answers', '0')),
             bad_answers=int(form.get('bad_answers', '0')),
-            avg_speed=Decimal(form.get('avg_speed', '0'))
+            avg_speed=Decimal(form.get('avg_speed', '0')),
+            result=int(form.get('good_answers', '0'))*5
         )
         now = datetime.datetime.now().strftime("%H:%M")
 

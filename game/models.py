@@ -1,8 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.core.validators import MinValueValidator, MaxValueValidator
 
-
+PERCENTAGE_VALIDATOR = [MinValueValidator(0), MaxValueValidator(101)]
 # Create your models here.
 
 class Game(models.Model):
@@ -16,7 +17,7 @@ class Game(models.Model):
     )
     state = models.CharField(max_length=1, choices=STATE_CHOICES)
     avg_speed = models.DecimalField(max_digits=9, decimal_places=3)
-
+    result = models.DecimalField(max_digits=4, decimal_places=1, default=0.0, validators=PERCENTAGE_VALIDATOR)
     objects = models.Manager()
 
 
