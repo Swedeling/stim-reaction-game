@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form method="post" enctype="multipart/form-data" action="{% url 'startgame' %}">
+<form method="post"  enctype="multipart/form-data" action="{% url 'result' %}" id="form">
     {% csrf_token %}
     {{game_form}}
     <div class="center_padded">
@@ -33,7 +33,7 @@ Wrong answers: .
     <input type="hidden" id="bad_answers" name="bad_answers">
     <input type="hidden" id="avg_speed" name="avg_speed">
 
-    <button class="btn btn-light" type="submit" id="submitter" style="display: none" >Dodaj</button>
+    <button class="btn btn-light" type="submit" id="submitter" style="display: none">Dodaj</button>
 </form>
 <ul class="messages">
     {% for message in messages %}
@@ -41,7 +41,6 @@ Wrong answers: .
     {% endfor %}
 </ul>
     <button type="button" class="btn btn-outline-dark" style="display:block;"><a href="{% url 'result' %}">results</a></button>
-
 
 {% endblock %}
 

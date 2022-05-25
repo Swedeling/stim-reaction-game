@@ -123,8 +123,7 @@ function gameOver() {
   } else {
     avg_speed.value = 0
   }
+    submitter.style.display = `block`
 }
-
-  submitter.style.display = `block`
 
 
