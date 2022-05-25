@@ -69,6 +69,16 @@ def history(request):
 
 
 def start_game(request):
+    game_form = GameForm()
+
+    return render(request=request, template_name="game/startgame.html", context={'game_form': game_form})
+
+
+def test(request):
+    return render(request=request,template_name="game/test.html")
+
+def result(request):
+
     if request.method == "POST":
         game_form = GameForm(request.POST)
         form = request.POST
@@ -89,15 +99,6 @@ def start_game(request):
         else:
             messages.info(request, "We couldn't add your game to database")
 
-    game_form = GameForm()
-
-    return render(request=request, template_name="game/startgame.html", context={'game_form': game_form})
-
-
-def test(request):
-    return render(request=request,template_name="game/test.html")
-
-def result(request):
     current_player = request.user
     objects = Game.objects.filter(player=current_player)
     last = objects.last()
