@@ -2,14 +2,29 @@
 
 <body>
 {% block content %}
-    <h2>Results history </h2>
+    <br><br><br><br>
+    <div class="row justify-content-center">
+        <h2 class="thick" ><b>Results history</b></h2>
+        <br><br><br><br>
+    </div>
 
-    <form method="get">
-    {{ myFilter.form }}
-        <button type = "subimt" > Search</button>
+
+    <form method="get" id="history_form">
+    <div class="row justify-content-center mb-5">
+        <div class="col"></div>
+    {{ myFilter.form}}
+        <div class="col">
+            <button class="btn btn-secondary" type = "submit" > Search</button>
+        </div>
+    </div>
+
+
+
     </form>
 
-    <table class="table">
+
+    <div class="row justify-content-center">
+    <table class="styled-table">
       <thead>
         <tr>
           <th scope="col">Player</th>
@@ -39,6 +54,7 @@
             {% endfor %}
       </tbody>
     </table>
+    </div>
 {% endblock %}
 
 </body>
