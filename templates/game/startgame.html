@@ -1,11 +1,37 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
+
 <form method="post"  enctype="multipart/form-data" action="{% url 'result' %}" id="form">
     {% csrf_token %}
-    {{game_form}}
-    <div class="center_padded">
+    <br><br>
+
+{#    <div class="row justify-content-center">#}
+{#            <h5 class="thick mx-2" style="font-size: 2">Please choose:</h5>#}
+    <div class="row justify-content-center">
+
+    <div class="col-2">
+        <h4 class="thick">{{game_form.state.0}}</h4>
+    </div>
+            <div class="col-2">
+
+        <h4 class="thick">{{game_form.state.1}}</h4>
+    </div>
+        </div>
+
+
+{#        <div class=" custom-control custom-checkbox ">#}
+{#        {{game_form|crispy}}#}
+{#        </div>#}
+
+
+    <div class="row justify-content-center">
+        <button class="btn btn-success btn-small py-1" type="submit" id="submitter" style="display: none" ><i class="fa-solid fa-plus"></i>  Add to database</button>
+    </div>
+
+    <div class="center_padded" style="background-color: #edf2e9">
         <h1 class="title" id="title">Stroop Test</h1>
         <p class="thick" id="summary">Match the color of the displayed text to the text on the buttons.</p>
         <p class="target" id="wordParagraph"></p>
@@ -17,8 +43,8 @@ Correct answers: .
 Wrong answers: .
         </pre>
         </div>
-          <button type="button" id="startButton" class="btn btn-success btn-lg" >Start game</button>
-          <button type="button" id="instructions" class="btn btn-secondary btn-lg">Instructions</button>
+          <button type="button" id="startButton" class="btn btn-success btn-lg" ><i class="fa-solid fa-play"></i>  Start game</button>
+          <button type="button" id="instructions" class="btn btn-secondary btn-lg"><i class="fa-solid fa-table-list"></i>  Instructions</button>
           <p id="counter" class="thick"></p>
           <button type="button" class="color btn btn-outline-dark" style="display:none;">pink</button>
           <button type="button" class="color btn btn-outline-dark" style="display:none;">orange</button>
@@ -33,14 +59,14 @@ Wrong answers: .
     <input type="hidden" id="bad_answers" name="bad_answers">
     <input type="hidden" id="avg_speed" name="avg_speed">
 
-    <button class="btn btn-light" type="submit" id="submitter" style="display: none">Dodaj</button>
+{#    <button class="btn btn-light" type="submit" id="submitter" style="display: none">Dodaj</button>#}
 </form>
-<ul class="messages">
-    {% for message in messages %}
-    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
-    {% endfor %}
-</ul>
-    <button type="button" class="btn btn-outline-dark" style="display:block;"><a href="{% url 'result' %}">results</a></button>
+</section>
+
+
+
+{#    <a class="href" style="display:block;"><a href="{% url 'result' %}">results</a></a>#}
+
 
 {% endblock %}
 

@@ -10,41 +10,56 @@
 
     <link href="{% static '/css/game_style.css' %}" rel="stylesheet" />
     <script src="{% static '/js/stroop_game.js' %}" defer></script>
+    <script src="https://kit.fontawesome.com/33da041b64.js" crossorigin="anonymous"></script>
+
 
     <title>{% block title %} Stim Reaction Game {% endblock %}</title>
 </head>
 
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/homepage">Stim Reaction Game</a>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <a class="navbar-brand" href="/homepage"><i class="fa-solid fa-eye"></i>  Stim Reaction Game</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="False" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          {% if user.is_authenticated %}
+        {% if user.is_authenticated %}
+      <div class="collapse navbar-collapse " id="navbarText">
+
+        <ul class="navbar-nav mr-auto my-2">
           <li class="nav-item">
-            <a class="nav-link" href='/homepage'}>Welcome, {{user.username}}</a>
-          </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/startgame">Start new game</a>
+            <a class="nav-link" href="/startgame"><i class="fa-solid fa-circle-play"></i>  Start new game</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/history">History</a>
+            <a class="nav-link" href="/history"><i class="fa-solid fa-clock-rotate-left"></i> History</a>
+          </li>
+              </ul>
+
+              <ul class="navbar-nav navbar-right">
+                  <li class="nav-item">
+            <a class="nav-link" href='/homepage'}>Welcome,<b> {{user.username}}</b></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/logout">Logout</a>
-
-          {% else %}
-
-          <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
           </li>
+              </ul>
+
+            {% else %}
+            <div class="collapse navbar-collapse " id="navbarText">
+            <ul class="navbar-nav mr-auto my-2"></ul>
+
+              <ul class="navbar-nav navbar-right">
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+            </li>
+              </ul>
+            </div>
 
           {% endif %}
-        </ul>
+
       </div>
     </nav>
     </header>

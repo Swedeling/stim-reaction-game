@@ -10,8 +10,8 @@ class Game(models.Model):
     bad_answers=models.IntegerField(default=1)
     start_time=models.DateTimeField(default=timezone.now())
     STATE_CHOICES = (
-        ('B', 'Im before work'),
-        ('A', 'Im after work'),
+        ('B', 'Before work'),
+        ('A', 'After work'),
     )
     state = models.CharField(max_length=1, choices=STATE_CHOICES)
     avg_speed = models.DecimalField(max_digits=9, decimal_places=3)

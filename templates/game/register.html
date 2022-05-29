@@ -5,21 +5,49 @@
 
 {% load crispy_forms_tags %}
 
+    <ul class="messages">
+    {% for message in messages %}
+        <div class="alert alert-warning">
+    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+        </div>
+    {% endfor %}
+</ul>
+
+
 <!--Register-->
+  <section class="vh-100" >
+<div class="container h-100 py-4">
+
+<div class="row d-flex justify-content-center align-items-center h-100">
+<div class="col-9">
+<div class="card text-black " style="border-radius: 25px; border: 2px solid black;">
+<div class="card-body p-md-2 ">
+<div class="row justify-content-center">
+<div class="col-md-12 col-lg-10 col-xl-6 order-2 order-lg-1">
+
 <div class="container py-5">
-	<h1>Register</h1>
+    <div class="row justify-content-center">
+
+	<h2 class="thick mb-4"><b>Register</b></h2>
 	<form method="POST">
 		{% csrf_token %}
 		{{ register_form|crispy }}
-		<button class="btn btn-primary" type="submit">Register</button>
+
+        <div class="row justify-content-center">
+		<button class="btn btn-secondary mt-3 py-2" type="submit">Register</button>
+        </div>
+
 	</form>
-	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+	<h8 class="text-center my-3">If you already have an account, <a href="/login">login</a> instead.</h8>
 </div>
-<ul class="messages">
-    {% for message in messages %}
-    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
-    {% endfor %}
-</ul>
+
+ </div>
+</div>
+</div>
+
+
+</div>
+
 
 {% endblock %}
 

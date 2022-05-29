@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
+
 
 <body>
 {% block content %}
@@ -10,15 +12,12 @@
 
 
     <form method="get" id="history_form">
-    <div class="row justify-content-center mb-5">
-        <div class="col"></div>
-    {{ myFilter.form}}
-        <div class="col">
-            <button class="btn btn-secondary" type = "submit" > Search</button>
-        </div>
+    <div class="row justify-content-center mb-1">
+        {{ myFilter.form|crispy}}
     </div>
-
-
+    <div class="row justify-content-center mb-2">
+        <button class="btn btn-secondary" type = "submit" ><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+    </div>
 
     </form>
 
