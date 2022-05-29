@@ -6,20 +6,58 @@
 {% load crispy_forms_tags %}
 
 <!--Login-->
-<div class="container py-5">
-  <h1>Login</h1>
-  <form method="POST">
-    {% csrf_token %}
-    {{ login_form|crispy }}
-    <button class="btn btn-primary" type="submit">Login</button>
-  </form>
-  <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
-</div>
-<ul class="messages">
+
+
+  <ul class="messages">
     {% for message in messages %}
+        <div class="alert alert-warning">
     <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+        </div>
     {% endfor %}
 </ul>
+
+
+
+ <section class="vh-100" >
+<div class="container h-100">
+
+<div class="row d-flex justify-content-center align-items-center h-100">
+<div class="col-6">
+<div class="card text-black" style="border-radius: 25px; border: 2px solid black;">
+<div class="card-body p-md-2">
+<div class="row justify-content-center">
+<div class="col-md-12 col-lg-10 col-xl-6 order-2 order-lg-1">
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+  <h2 class="thick mb-4"><b>Login</b></h2>
+    </div>
+
+  <form method="POST">
+    {% csrf_token %}
+      <div class="row justify-content-center">
+    <div class="col-12">
+        {{ login_form|crispy }}
+    </div>
+    </div>
+      <div class="row justify-content-center">
+    <button class="btn btn-secondary mt-3 py-2" type="submit">Login</button>
+      </div>
+  </form>
+
+
+
+    </div>
+    <div class="row justify-content-center">
+    <h8 class="text-center mb-3">Don't have an account? <a href="/register">Register now!</a></h8>
+    </div>
+</div>
+</div>
+</div>
+
+
+</div>
+
 
 
 {% endblock %}
