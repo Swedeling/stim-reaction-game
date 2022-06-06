@@ -10,6 +10,8 @@ from .models import Game
 from .models import Score
 import datetime
 from .forms import GameForm
+import csv
+import codecs
 
 from decimal import Decimal
 
@@ -110,3 +112,17 @@ def result(request):
         prev = 0
         diff = 0 - last.result
     return render(request=request, template_name="game/result.html", context = {'data': Game.objects.filter(player=current_player), 'last': last, 'prev' : prev, 'diff': diff})
+
+def download_csv(request):
+    response = HttpResponse(
+        content_type='text/csv',
+        headers={'Content-Disposition': 'attachment; filename="game_history.csv"'},
+    )
+    response.write(codecs.BOM_UTF8)
+    writer = csv.writer(response, delimiter=";")
+    writer.writerow(["Player", "Date", "State", "Average speed", "Good answers", "Bad answers", "Result"])
+
+    for game in Game.objects.all():
+        row = [game.player,game.start_time, game.state, game.avg_speed, game.good_answers, game.bad_answers, game.result]
+        writer.writerow(row)
+    return response
