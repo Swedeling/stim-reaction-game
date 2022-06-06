@@ -29,4 +29,5 @@ urlpatterns = [
     path("startgame", views.start_game, name="startgame"),
     path("history", views.history, name="history"),
     path("result", views.result, name="result"),
+    path("download_csv", views.download_csv, name="download_csv"),
     path("test", views.test, name="test")] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
