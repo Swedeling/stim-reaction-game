@@ -6,31 +6,37 @@
 
         {% if last.state == 'B' %}
             {% if last.result <= 60 %}
-                <p class="thick" id="summary">Your result is below 60% ({{ last.result }}%).</p>
+                <p class="thick" id="summary"> Accuracy: {{ last.result }}%.</p>
+                <p class="thick" id="summary">Your result is below 60%.</p>
                 <p class="thick" id="summary">Maybe it's time for a rest?</p>
+                <p class="thick" id="summary">You can come back later and check your score after work.</p>
             {%  else %}
-                Great result! It's your first game. Play again after work :)
+                <p class="thick" id="summary"> Accuracy: {{ last.result }}%.</p>
+                <p class="thick" id="summary">Great result! It's your first game. Come back later and check your score after work :)</p>
             {% endif %}
 
         {% else %}
             {%  if prev.state == 'A' %}
                 {% if last.result <= 60 %}
-                    <p class="thick" id="summary">Your result is below 60% ({{ last.result }}%).</p>
-                    <p class="thick" id="summary">We didn't save your score before work, so we can't compare it.</p>
-                    <p class="thick" id="summary">Maybe it's time for a rest?</p>
+                    <p class="thick" id="summary"> Accuracy: {{ last.result }}%.</p>
+                    <p class="thick" id="summary">We didn't save your score before work, so we can't compare it. But your score is below 60%. Maybe it's time for a rest?</p>
                 {%  else %}
-                    <p class="thick" id="summary">Your result is {{ last.result}}%. </p>
+                    <p class="thick" id="summary"> Accuracy: {{ last.result }}%.</p>
                     <p class="thick" id="summary">We didn't save your score before work, so we can't compare it. </p>
                 {% endif %}
             {% else %}
                 {% if last.result > prev.result  %}
-                    <p class="thick" id="summary">Your result is {{ last.result}}%. </p>
+                    <p class="thick" id="summary"> Accuracy: {{ last.result }}%.</p>
+                    <p class="thick" id="summary"> Accuracy for the previous trial: {{ prev.result }}%.</p>
                     <p class="thick" id="summary">Your're getting better! You can keep working!</p>
                 {% elif diff < 10 %}
-                    <p class="thick" id="summary">Your score is {{ last.result}}%. It is less than 10% worse than before work.</p>
-                    <p class="thick" id="summary">You can keep working, but remember to rest!</p>
+                    <p class="thick" id="summary"> Accuracy: {{ last.result }}%.</p>
+                    <p class="thick" id="summary"> Accuracy for the previous trial: {{ prev.result }}%.</p>
+                    <p class="thick" id="summary">Your score is less than 10% worse than before work. You can keep working, but remember to rest!</p>
                 {%  else %}
-                    <p class="thick" id="summary">Your score is {{ last.result}}%. It's worse than before :( </p>
+                    <p class="thick" id="summary"> Accuracy: {{ last.result }}%.</p>
+                    <p class="thick" id="summary"> Accuracy for the previous trial: {{ prev.result }}%.</p>
+                    <p class="thick" id="summary"> Yor result is worse than before :(</p>
                     <p class="thick" id="summary">Maybe it's time for a rest?</p>
                 {%  endif %}
             {% endif %}

@@ -103,6 +103,10 @@ def result(request):
     objects = Game.objects.filter(player=current_player)
     last = objects.last()
     num = int(len(Game.objects.filter(player=current_player)) - 2)
-    prev = objects[num]
-    diff = prev.result - last.result
+    if num > 0:
+        prev = objects[num]
+        diff = prev.result - last.result
+    else:
+        prev = 0
+        diff = 0 - last.result
     return render(request=request, template_name="game/result.html", context = {'data': Game.objects.filter(player=current_player), 'last': last, 'prev' : prev, 'diff': diff})
