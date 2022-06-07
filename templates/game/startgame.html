@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
+{% load static %}
 
 {% block content %}
 
@@ -35,18 +36,17 @@
         <h1 class="title" id="title">Stroop Test</h1>
         <p class="thick" id="summary">Match the color of the displayed text to the text on the buttons.</p>
         <p class="target" id="wordParagraph"></p>
-        <div id = wrapper style="display: none;">
+            <div id = wrapper style="display: none;">
         <pre class="medium" id="results">
 Correct response average time: seconds.
 No correct responses.
 Correct answers: .
 Wrong answers: .
         </pre>
-        </div>
+            </div>
           <button type="button" id="startButton" class="btn btn-success btn-lg" ><i class="fa-solid fa-play"></i>  Start game</button>
-          <button type="button" id="instructions" class="btn btn-secondary btn-lg"><i class="fa-solid fa-table-list"></i>  Instructions</button>
+          <button type="button" id="instructionsButton" class="btn btn-secondary btn-lg"><i class="fa-solid fa-table-list"></i>  Instructions</button>
           <p id="counter" class="thick"></p>
-          <button type="button" class="color btn btn-outline-dark" style="display:none;">pink</button>
           <button type="button" class="color btn btn-outline-dark" style="display:none;">pink</button>
           <button type="button" class="color btn btn-outline-dark" style="display:none;">orange</button>
           <button type="button" class="color btn btn-outline-dark" style="display:none;">yellow</button>
@@ -54,6 +54,10 @@ Wrong answers: .
           <button type="button" class="color btn btn-outline-dark" style="display:none;">blue</button>
           <button type="button" class="color btn btn-outline-dark" style="display:none;">purple</button>
           <p id="reactionTime" class="thick" style="display: none;"></p>
+        <div id="instructionsDiv" style="display: none;">
+            <img src="{% static 'instrukcja_mockup_2.png' %}" width="600">
+        </div>
+
     </div>
 
     <input type="hidden" id="good_answers" name="good_answers">

@@ -3,7 +3,6 @@ let startButton = document.getElementById(`startButton`)
 let colorButtons = document.getElementsByClassName(`color`)
 let counter = document.getElementById(`counter`);
 let reactionTime = document.getElementById(`reactionTime`);
-let instructionButton = document.getElementById(`instructions`)
 let title=document.getElementById(`title`)
 let summary=document.getElementById(`summary`)
 let results=document.getElementById(`results`)
@@ -13,6 +12,9 @@ let bad_answers=document.getElementById(`bad_answers`)
 let avg_speed=document.getElementById(`avg_speed`)
 
 let submitter=document.getElementById(`submitter`)
+
+let instructionButton = document.getElementById(`instructionsButton`)
+let instructionDiv = document.getElementById(`instructionsDiv`)
 
 
 let count = 0
@@ -25,9 +27,22 @@ let reactionsSum = 0
 
 
 startButton.addEventListener(`click`, start)
+instructionButton.addEventListener(`click`, displayInstructions)
 
 for (let button of colorButtons) {
   button.addEventListener(`click`, selectColor)
+}
+
+function displayInstructions()
+{
+    if (instructionDiv.style.display == `block`)
+    {
+        instructionDiv.style.display = `none`
+    }
+    else
+    {
+        instructionDiv.style.display = `block`
+    }
 }
 
 function start() {
@@ -36,7 +51,7 @@ function start() {
   counter.style.display=`block`
   reactionTime.style.display=`none`
   wordParagraph.style.display=`block`
-
+  instructionDiv.style.display = `none`
 
   results.style.display = `none`
   startButton.style.display = `none`
