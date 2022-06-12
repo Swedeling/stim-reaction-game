@@ -4,10 +4,11 @@ This project was completed as credit for the Fundamentals of Telemedicine classe
 #### Contribution
 [@Swedeling](https://github.com/Swedeling) - Project Manager, Tester, Django support <br>
 [@BZiolkow](https://github.com/BZiolkow) - problem analysis, Django support <br>
-[@izabelawilusz](https://github.com/izabelawilusz) - UX/UI Designer <br>
 [@AlSzmigiel](https://github.com/AlSzmigiel) - problem analysis, Django Developer <br>
 [@SzymonBuch](https://github.com/SzymonBuch) - JavaScript and Django Developer <br>
 [@chickorita](https://github.com/chickorita) - JavaScript and Django developer <br>
+[@izabelawilusz](https://github.com/izabelawilusz) - UX/UI Designer <br>
+
 ## Introduction
 
 The increasing attention paid to the efficiency of performed work and the high number of accidents at work has led 
