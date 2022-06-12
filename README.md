@@ -5,7 +5,7 @@ This project was completed as credit for the Fundamentals of Telemedicine classe
 [@Swedeling](https://github.com/Swedeling) - Project Manager, Tester, Django support <br>
 [@BZiolkow](https://github.com/BZiolkow) - problem analysis, Django support <br>
 [@izabelawilusz](https://github.com/izabelawilusz) - UX/UI Designer <br>
-[@AlSzmigiel](https://github.com/AlSzmigiel) - Django Developer <br>
+[@AlSzmigiel](https://github.com/AlSzmigiel) - problem analysis, Django Developer <br>
 [@SzymonBuch](https://github.com/SzymonBuch) - JavaScript and Django Developer <br>
 [@chickorita](https://github.com/chickorita) - JavaScript and Django developer <br>
 ## Introduction
@@ -30,21 +30,73 @@ does not match the name of the color.
 Graphically it can be represented as below: 
 
 <div style="text-align:center">
-    <p float='left'>
+    <p float='center'>
         <img src ="static/instrukcja_mockup_2.png" width="350"/>
     </p>
 </div>
 
-## Game
-TO DO: schemat + opis 
+## Game 
+<div style="text-align:center">
+    <p float='center'>
+        <img src ="docs/mainpage.png" width="300"/>
+    </p>
+</div>
+
+<div style="text-align:center">
+    <p float='center'>
+        <img src ="docs/game.png" width="300"/>
+    </p>
+</div>
+
+<div style="text-align:center">
+    <p float='center'>
+        <img src ="docs/result.png" width="300"/>
+    </p>
+</div>
+
+<div style="text-align:center">
+    <p float='center'>
+        <img src ="docs/result%20analysis.png" width="300"/>
+    </p>
+</div>
+
+
+<div style="text-align:center">
+    <p float='center'>
+        <img src ="docs/history.png" width="300"/>
+    </p>
+</div>
+
+## Game Flow
+<div style="text-align:center">
+    <p float='center'>
+        <img src ="docs/scheme.png" width="300"/>
+    </p>
+</div>
+
+## UML
+<div style="text-align:center">
+    <p float='center'>
+        <img src ="docs/UML.png" width="300"/>
+    </p>
+</div>
 
 ## Results
-TO DO: tabelka + analiza
+<div style="text-align:center">
+    <p float='center'>
+        <img src ="docs/tests.png" width="300"/>
+    </p>
+</div>
 
 ## Summary
+<li> the game allows the measurement of reaction time to a stimulus </li>
+<li> the game allows the measurement of reaction time to a stimulus </li>
+<li> tests show increased reaction time after working in front of a computer </li>
 
 ## What's next?
+<li> making the game available on an online server </li>
+<li> further incentives can be introduced </li>
 
 ## Files
-<li> Presentation - short ppt presentation with introduction, tools, results and summary (in Polish) </li>
-<li> Report - project documentation </li>
+<li> [Presentation] - short ppt presentation with introduction, tools, results and summary (in Polish) </li>
+<li> [Report] - project documentation </li>
