@@ -38,7 +38,7 @@ Graphically it can be represented as below:
 ## Game 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/mainpage.png" width="500"/>
+        <img src ="docs/mainpage.png" width="500" class="center"/>
     </p>
 </div>
 
