@@ -36,7 +36,7 @@ Graphically it can be represented as below:
 </div>
 
 ## Game 
-<div style="text-align:center">
+<div style="img-align:center">
     <p float='center'>
         <img src ="docs/mainpage.png" width="500" class="center"/>
     </p>
