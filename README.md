@@ -31,60 +31,60 @@ Graphically it can be represented as below:
 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="static/instrukcja_mockup_2.png" width="350"/>
+        <img src ="static/instrukcja_mockup_2.png" width="400"/>
     </p>
 </div>
 
 ## Game 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/mainpage.png" width="300"/>
+        <img src ="docs/mainpage.png" width="500"/>
     </p>
 </div>
 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/game.png" width="300"/>
+        <img src ="docs/game.png" width="500"/>
     </p>
 </div>
 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/result.png" width="300"/>
+        <img src ="docs/result.png" width="500"/>
     </p>
 </div>
 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/result%20analysis.png" width="300"/>
+        <img src ="docs/result%20analysis.png" width="500"/>
     </p>
 </div>
 
 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/history.png" width="300"/>
+        <img src ="docs/history.png" width="500"/>
     </p>
 </div>
 
 ## Game Flow
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/scheme.png" width="300"/>
+        <img src ="docs/scheme.png" width="450"/>
     </p>
 </div>
 
 ## UML
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/UML.png" width="300"/>
+        <img src ="docs/UML.PNG" width="450"/>
     </p>
 </div>
 
 ## Results
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/tests.png" width="300"/>
+        <img src ="docs/tests.PNG" width="500"/>
     </p>
 </div>
 
@@ -95,8 +95,9 @@ Graphically it can be represented as below:
 
 ## What's next?
 <li> making the game available on an online server </li>
+<li> saving the results into a database allows their analysis </li>
 <li> further incentives can be introduced </li>
 
 ## Files
-<li> [Presentation] - short ppt presentation with introduction, tools, results and summary (in Polish) </li>
-<li> [Report] - project documentation </li>
+- [Final Presentation](https://github.com/Swedeling/stim-reaction-game/blob/main/Final%20presentation%20-%20StimReactionGame.pdf) - short ppt presentation with introduction, tools, results and summary (in Polish) </li>
+- [Final Report](https://github.com/Swedeling/stim-reaction-game/blob/main/Final%20Report%20-%20StimReactionGame.pdf) - project description and documentation (in Polish)
