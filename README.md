@@ -31,7 +31,7 @@ Graphically it can be represented as below:
 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="static/instrukcja_mockup_2.png" width="400"/>
+        <img src ="static/instrukcja_mockup_2.png" width="800"/>
     </p>
 </div>
 
@@ -44,47 +44,47 @@ Graphically it can be represented as below:
 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/game.png" width="500"/>
+        <img src ="docs/game.png" width="800"/>
     </p>
 </div>
 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/result.png" width="500"/>
+        <img src ="docs/result.png" width="800"/>
     </p>
 </div>
 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/result%20analysis.png" width="500"/>
+        <img src ="docs/result%20analysis.png" width="800"/>
     </p>
 </div>
 
 
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/history.png" width="500"/>
+        <img src ="docs/history.png" width="800"/>
     </p>
 </div>
 
 ## Game Flow
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/scheme.png" width="450"/>
+        <img src ="docs/scheme.png" width="550"/>
     </p>
 </div>
 
 ## UML
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/UML.PNG" width="450"/>
+        <img src ="docs/UML.PNG" width="650"/>
     </p>
 </div>
 
 ## Results
 <div style="text-align:center">
     <p float='center'>
-        <img src ="docs/tests.PNG" width="500"/>
+        <img src ="docs/tests.PNG" width="700"/>
     </p>
 </div>
 
