@@ -6,7 +6,7 @@ This project was completed as credit for the Fundamentals of Telemedicine classe
 [@BZiolkow](https://github.com/BZiolkow) - problem analysis, Django support <br>
 [@AlSzmigiel](https://github.com/AlSzmigiel) - problem analysis, Django Developer <br>
 [@SzymonBuch](https://github.com/SzymonBuch) - JavaScript and Django Developer <br>
-[@chickorita](https://github.com/chickorita) - JavaScript and Django developer <br>
+[@JuliaTelesinska](https://github.com/JuliaTelesinska) - JavaScript and Django developer <br>
 [@izabelawilusz](https://github.com/izabelawilusz) - UX/UI Designer <br>
 
 ## Introduction
